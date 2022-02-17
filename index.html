@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Plastic Sheets Cut to Size &amp; Shape - Cut My Plastic</title>
+  <script src="https://kit.fontawesome.com/0a8cb927df.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+</head>
+
+<!-- This website is a clone of a website called (cut my plastic) the original site is a bootstrap website. Ive made a copy of the website using HTML5, CSS3 and JAVASCRIPT. Ive used font awsome for the image icons and swiper js for the drag carousel slider. vanilla js for the modal slider and navagation modal functionality.
+
+Ive tried to be as accurate as possible in terms of visually recreating the website and functionaity whilst also keeping the code maintainable. All code is my own and was written from scratch and passes validation (no errors). Check out the original website at https://www.cutmyplastic.co.uk/ and compare it to my replication -->
+
+
+
+
+<body>
+  <header>
+    <div class='header-container-1'>
+      <div class='items1'>
+        <a class='email' href="#">
+          <i class="fas fa-envelope"> </i>
+          <div class="text">
+            <p>info@cutmyplastic.co.uk</p>
+          </div>
+        </a>
+
+        <a class='mobile' href="#">
+          <i class="fas fa-mobile-alt"></i>
+          <div class='text'>
+            <p>01903 389024</p>
+          </div>
+
+        </a>
+      </div>
+      <a class='reviews-top' href="#">
+        <img class='feefo' src="images/feefo_logo_grey.png" alt="feefo-logo">
+        <p class='symbol'> | </p>
+        <div class='five-stars'>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <p class="rating">4.8/5</p>
+
+      </a>
+      <div class='items2'>
+        <a class='register' href="#">
+          <i class="fas fa-user"></i>
+          <div class='text'>
+            <p>Register</p>
+          </div>
+
+        </a>
+        <a class='login' href="#">
+          <i class="fas fa-lock"></i>
+          <div class="text">
+            <p>Login</p>
+          </div>
+
+        </a>
+      </div>
+    </div>
+    <div class='header-container-2'>
+      <div class='items1' id='items-1'>
+        <div class='hamburger' onclick='openModal(navmb)'>
+          <div class='bar-1'></div>
+          <div class='bar-1'></div>
+          <div class='bar-1'></div>
+        </div>
+      </div>
+      <a class='logo' href="#"><img src="images/Cut_my_plastic_Blue_and_Black_CMYK_1.png" alt="logo">
+
+      </a>
+      <div class="box">
+        <div class='thumb-pound-sign-container'>
+          <div class='thumb-pound-sign'>
+            <i class="fas fa-thumbs-up"></i>
+          </div>
+          <div class='thumb-pound-sign-text'>
+            <p> Brilliant Service</p>
+            <p class='small-text'>Join 100,000s of Happy Customers</p>
+          </div>
+        </div>
+        <div class='thumb-pound-sign-container-1'>
+          <div class='thumb-pound-sign'>
+            <i class="fas fa-pound-sign"></i>
+          </div>
+          <div class='thumb-pound-sign-text'>
+            <p>Bulk Order Discounts</p>
+            <p class='small-text'> Spend over £750 for up to 20% off</p>
+          </div>
+        </div>
+      </div>
+      <div class='items2'>
+        <a class='cart' href="#"><i class="fas fa-shopping-cart"></i></a>
+        <a class='cart-quantity' href="#">0</a>
+      </div>
+    </div>
+    <div class='banner'>
+      <a class="pound-sign" href="#">
+        <p><i class="fas fa-pound-sign" id='pound-sign-resize'></i>No Minimum Order</p>
+
+      </a>
+      <a class="del-truck" href="#">
+        <p><i class="fas fa-shipping-fast" id='del-truck-resize'></i>In Stock & Quick Delivery from £4.95</p>
+
+      </a>
+      <a class="secure-shopping" href="#">
+        <p><i class="fas fa-lock" id='secure-shopping-resize'></i>Secure Shopping with Sectigo SSL</p>
+
+      </a>
+      <a class='reviews' href="#"><img class='feefo' src="images/feefo_logo_white.png" alt="feefo-logo">
+      </a>
+
+      <p class='symbol'> | </p>
+      <a class='five-stars' href="#">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+
+      </a>
+      <p class="rating">4.8/5</p>
+    </div>
+  </header>
+  <nav>
+    <ul class='nav-items'>
+      <li onclick='open_Nav_Modal(a2,item1)'><a href="#" id='item1' class='item-heading'>Plastic Sheets <i
+            class="fas fa-sort-down"></i></a></li>
+      <li onclick='open_Nav_Modal(a3,item2)'><a href="#" id='item2' class='item-heading'>Wood Sheets <i
+            class="fas fa-sort-down"></i></a></li>
+      <li onclick='open_Nav_Modal(a4,item3)'><a href="#" id='item3' class='item-heading'>Splashbacks <i
+            class="fas fa-sort-down"></i></a></li>
+      <li><a href="#">Shelves</a></li>
+      <li><a href="#">Wardrobes</a></li>
+      <li><a href="#">Plinths</a></li>
+      <li><a href="#">Home & Garden</a></li>
+      <li><a href="#">Sneeze Screens</a></li>
+      <li><a href="#">About Us</a></li>
+    </ul>
+    <div id='navmb'>
+      <ul class='nav-items-mob'>
+        <li class='close-sign' onclick='closeModal(navmb)'><i class="fas fa-times"></i></li>
+        <li><a href="#" class='plastic-sheets'>Plastic Sheets</a></li>
+        <li><a href="#">Wood Sheets</a></li>
+        <li><a href="#">Splashbacks </a></li>
+        <li><a href="#">Shelves </a></li>
+        <li><a href="#">Wardrobes </a></li>
+        <li><a href="#">Plinths </a></li>
+        <li><a href="#">Home & Garden </a></li>
+        <li><a href="#">Sneeze Screens </a></li>
+        <li><a href="#">About Us </a></li>
+      </ul>
+    </div>
+    <div id='a2' class='close-modal'>
+      <div class='nav-dropdown'>
+        <ul class="menu-1">
+          <li class='menu-items' onclick='hideItems(0)'>Acrylic<i class="fas fa-angle-right"></i></li>
+          <li class='menu-items' onclick='hideItems(1)'>Polycarbonate<i class="fas fa-angle-right"></i></li>
+          <li class='menu-items' onclick='hideItems(2)'>Fomex<i class="fas fa-angle-right"></i></li>
+          <li class='menu-items' onclick='hideItems(3)'>Dibond<i class="fas fa-angle-right"></i></li>
+          <li class='menu-items' onclick='hideItems(4)'>Correx<i class="fas fa-angle-right"></i></li>
+        </ul>
+        <div class='items'>
+          <ul>
+            <li>Acrylic</li>
+            <li>
+              <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                  <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!" />
+                </a>
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <li>Acrylic</li>
+          </ul>
+          <ul>
+            <li>Acrylic</li>
+          </ul>
+          <ul>
+            <li>Acrylic</li>
+          </ul>
+          <ul>
+            <li>Acrylic</li>
+          </ul>
+        </div>
+        <div class='items'>
+          <ul>
+            <li>Polycarbonate</li>
+          </ul>
+          <ul>
+            <li>Polycarbonate</li>
+            <li>
+              <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                  <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!" />
+                </a>
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <li>Polycarbonate</li>
+          </ul>
+          <ul>
+            <li>Polycarbonate</li>
+          </ul>
+          <ul>
+            <li>Polycarbonate</li>
+          </ul>
+        </div>
+        <div class='items'>
+          <ul>
+            <li>Fomex</li>
+          </ul>
+          <ul>
+            <li>Fomex</li>
+          </ul>
+          <ul>
+            <li>Fomex</li>
+            <li>
+              <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                  <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!" />
+                </a>
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <li>Fomex</li>
+          </ul>
+          <ul>
+            <li>Fomex</li>
+          </ul>
+        </div>
+        <div class='items'>
+          <ul>
+            <li>Dibond</li>
+          </ul>
+          <ul>
+            <li>Dibond</li>
+          </ul>
+          <ul>
+            <li>Dibond</li>
+          </ul>
+          <ul>
+            <li>Dibond</li>
+            <li>
+              <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                  <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!" />
+                </a>
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <li>Dibond</li>
+          </ul>
+        </div>
+        <div class='items'>
+          <ul>
+            <li>Corex</li>
+          </ul>
+          <ul>
+            <li>Corex</li>
+          </ul>
+          <ul>
+            <li>Corex</li>
+          </ul>
+          <ul>
+            <li>Corex</li>
+          </ul>
+          <ul>
+            <li>Corex</li>
+            <li>
+              <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                  <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!" />
+                </a>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id='a3' class='close-modal'>
+      <div class='nav-dropdown'>
+        <ul class="menu-1">
+          <li class='menu-items1' onclick='hideItems1(0)'>MDF<i class="fas fa-angle-right"></i></li>
+          <li class='menu-items1' onclick='hideItems1(1)'>Plywood<i class="fas fa-angle-right"></i></li>
+          <li class='menu-items1' onclick='hideItems1(2)'>OSB<i class="fas fa-angle-right"></i></li>
+          <li class='menu-items1' onclick='hideItems1(3)'>Furniture Boards<i class="fas fa-angle-right"></i></li>
+          <li class='menu-items1' onclick='hideItems1(4)'>Decorative Panels<i class="fas fa-angle-right"></i></li>
+        </ul>
+        <div class='items_1a'>
+          <ul>
+            <li>MDF</li>
+            <li>
+              <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                  <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!" />
+                </a>
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <li>MDF</li>
+          </ul>
+          <ul>
+            <li>MDF</li>
+          </ul>
+          <ul>
+            <li>MDF</li>
+          </ul>
+          <ul>
+            <li>MDF</li>
+          </ul>
+        </div>
+        <div class='items_1a'>
+          <ul>
+            <li>Plywood</li>
+          </ul>
+          <ul>
+            <li>Plywood</li>
+            <li>
+              <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                  <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!" />
+                </a>
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <li>Plywood</li>
+          </ul>
+          <ul>
+            <li>Plywood</li>
+          </ul>
+          <ul>
+            <li>Plywood</li>
+          </ul>
+        </div>
+        <div class='items_1a'>
+          <ul>
+            <li>OSB</li>
+          </ul>
+          <ul>
+            <li>OSB</li>
+          </ul>
+          <ul>
+            <li>OSB</li>
+            <li>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                  alt="Valid CSS!" />
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>OSB</li>
+          </ul>
+          <ul>
+            <li>OSB</li>
+          </ul>
+        </div>
+        <div class='items_1a'>
+          <ul>
+            <li>Furniture Boards</li>
+          </ul>
+          <ul>
+            <li>Furniture Boards</li>
+          </ul>
+          <ul>
+            <li>Furniture Boards</li>
+          </ul>
+          <ul>
+            <li>Furniture Boards</li>
+            <li>
+              <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                  <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!" />
+                </a>
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <li>Furniture Boards</li>
+          </ul>
+        </div>
+        <div class='items_1a'>
+          <ul>
+            <li>Decorative Panels</li>
+          </ul>
+          <ul>
+            <li>Decorative Panels</li>
+          </ul>
+          <ul>
+            <li>Decorative Panels</li>
+          </ul>
+          <ul>
+            <li>Decorative Panels</li>
+          </ul>
+          <ul>
+            <li>Decorative Panels</li>
+            <li>
+              <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                  <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!" />
+                </a>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id='a4' class='close-modal'>
+      <div class='nav-dropdown'>
+        <ul class="menu-1">
+          <li class='menu-items2' onclick='hideItems2(0)'>Kitchen<i class="fas fa-angle-right"></i></li>
+          <li class='menu-items2' onclick='hideItems2(1)'>Glass<i class="fas fa-angle-right"></i></li>
+          <li class='menu-items2' onclick='hideItems2(2)'>Bathroom<i class="fas fa-angle-right"></i></li>
+          <li class='menu-items2' onclick='hideItems2(3)'>Mirrored<i class="fas fa-angle-right"></i></li>
+          <li class='menu-items2' onclick='hideItems2(4)'>Learn about<i class="fas fa-angle-right"></i></li>
+        </ul>
+        <div class='items_2a'>
+          <ul>
+            <li>Kitchen</li>
+            <li>
+              <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                  <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!" />
+                </a>
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <li>Kitchen</li>
+          </ul>
+          <ul>
+            <li>Kitchen</li>
+          </ul>
+          <ul>
+            <li>Kitchen</li>
+          </ul>
+          <ul>
+            <li>Kitchen</li>
+          </ul>
+        </div>
+        <div class='items_2a'>
+          <ul>
+            <li>Glass</li>
+          </ul>
+          <ul>
+            <li>Glass</li>
+            <li>
+              <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                  <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!" />
+                </a>
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <li>Glass</li>
+          </ul>
+          <ul>
+            <li>Glass</li>
+          </ul>
+          <ul>
+            <li>Glass</li>
+          </ul>
+        </div>
+        <div class='items_2a'>
+          <ul>
+            <li>Bathroom</li>
+          </ul>
+          <ul>
+            <li>Bathroom</li>
+          </ul>
+          <ul>
+            <li>Bathroom</li>
+            <li>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                  alt="Valid CSS!" />
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>Bathroom</li>
+          </ul>
+          <ul>
+            <li>Bathroom</li>
+          </ul>
+        </div>
+        <div class='items_2a'>
+          <ul>
+            <li>Mirrored</li>
+          </ul>
+          <ul>
+            <li>Mirrored</li>
+          </ul>
+          <ul>
+            <li>Mirrored</li>
+          </ul>
+          <ul>
+            <li>Mirrored</li>
+            <li>
+              <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                  <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!" />
+                </a>
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <li>Mirrored</li>
+          </ul>
+        </div>
+        <div class='items_2a'>
+          <ul>
+            <li>Learn about</li>
+            <li>
+              <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                  <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!" />
+                </a>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <div class='plastic-sheets-container'>
+    <div class='background-img-plastic-sheets'>
+      <div>
+        <h1>High Quality and Bespoke Plastic Sheets Cut for You</h1>
+        <p>Here at Cut My Plastic you can order and cut plastic to your requirements</p>
+      </div>
+    </div>
+    <div class='acrylic'>
+      <h2>Clear, coloured, frosted, mirrored...</h2>
+      <p>You name it we have it! Over 32 options of acrylic in a range of thicknesses to choose from.</p>
+      <a href="#" id='button-1'>Shop Now</a>
+    </div>
+  </div>
+  <main>
+    <section class='section-1-row'>
+      <div class='categories'>
+        <h2>WALL PANELLING</h2>
+        <p>Recreate the latest Instagram trend and add character to your home with a simple DIY project</p>
+        <a href="#" class='button-2'>Shop Now</a>
+      </div>
+      <div class='categories-2'>
+        <h2>NEW WARDROBES</h2>
+        <p>Solve your storage woes with our affordable made to measure wardrobes in 25+ finishes</p>
+        <a href="#" class='button-2'>Take a look</a>
+      </div>
+    </section>
+    <div class='swiper-title'>Be Inspired! #CutMyPlastic</div>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <figure class="swiper-slide" id='img-1'>
+          <img class="swiper-slide" src="images/low_resolution-(1).jpg" alt="image">
+          <p id='img-hover-1' onclick='openModal(a1); currentSlide(1);'><i class="fab fa-instagram"></i></p>
+        </figure>
+        <figure class="swiper-slide" id='img-2'>
+          <img class="swiper-slide" src="images/low_resolution-(2).jpg" alt="image">
+          <p id='img-hover-2' onclick='openModal(a1); currentSlide(2)'><i class="fab fa-instagram"></i></p>
+        </figure>
+        <figure class="swiper-slide" id='img-3'>
+          <img class="swiper-slide" src="images/low_resolution-(3).jpg" alt="image">
+          <p id='img-hover-3' onclick='openModal(a1); currentSlide(3);'><i class="fab fa-instagram"></i></p>
+        </figure>
+        <figure class="swiper-slide" id='img-4'>
+          <img class="swiper-slide" src="images/low_resolution-(4).jpg" alt="image">
+          <p id='img-hover-4' onclick='openModal(a1); currentSlide(4);'><i class="fab fa-instagram"></i></p>
+        </figure>
+        <figure class="swiper-slide" id='img-5'>
+          <img class="swiper-slide" src="images/low_resolution-(5).jpg" alt="image">
+          <p id='img-hover-5' onclick='openModal(a1); currentSlide(5)'><i class="fab fa-instagram"></i></p>
+        </figure>
+        <figure class="swiper-slide" id='img-6'>
+          <img class="swiper-slide" src="images/low_resolution-(6).jpg" alt="image">
+          <p id='img-hover-6' onclick='openModal(a1); currentSlide(6);'><i class="fab fa-instagram"></i></p>
+        </figure>
+        <figure class="swiper-slide" id='img-7'>
+          <img class="swiper-slide" src="images/low_resolution-(7).jpg" alt="image">
+          <p id='img-hover-7' onclick='openModal(a1); currentSlide(7)'><i class="fab fa-instagram"></i></p>
+        </figure>
+        <figure class="swiper-slide" id='img-8'>
+          <img class="swiper-slide" src="images/low_resolution-(8).jpg" alt="image">
+          <p id='img-hover-8' onclick='openModal(a1); currentSlide(8);'><i class="fab fa-instagram"></i></p>
+        </figure>
+      </div>
+    </div>
+    <div id='a1'>
+      <div class="blog-slider__container">
+        <div class="blogSlides fade">
+          <img src="images/standard_resolution-(1).jpg" alt="image">
+          <div class="blog-slider__text">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, in cum architecto minima eius,
+              molestias ut dignissimos, quo quidem illo voluptatibus voluptates dolor asperiores laudantium obcaecati
+              corporis neque similique. Provident.</p>
+            <p>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                  alt="Valid CSS!" />
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="blogSlides fade">
+          <img src="images/standard_resolution-(2).jpg" alt="image">
+          <div class="blog-slider__text">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, in cum architecto minima eius,
+              molestias ut dignissimos, quo quidem illo voluptatibus voluptates dolor asperiores laudantium obcaecati
+              corporis neque similique. Provident.</p>
+            <p>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                  alt="Valid CSS!" />
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="blogSlides fade">
+          <img src="images/standard_resolution-(3).jpg" alt="image">
+          <div class="blog-slider__text">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, in cum architecto minima eius,
+              molestias ut dignissimos, quo quidem illo voluptatibus voluptates dolor asperiores laudantium obcaecati
+              corporis neque similique. Provident.</p>
+            <p>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                  alt="Valid CSS!" />
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="blogSlides fade">
+          <img src="images/standard_resolution-(4).jpg" alt="image">
+          <div class="blog-slider__text">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, in cum architecto minima eius,
+              molestias ut dignissimos, quo quidem illo voluptatibus voluptates dolor asperiores laudantium obcaecati
+              corporis neque similique. Provident.</p>
+            <p>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                  alt="Valid CSS!" />
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="blogSlides fade">
+          <img src="images/standard_resolution-(5).jpg" alt="image">
+          <div class="blog-slider__text">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, in cum architecto minima eius,
+              molestias ut dignissimos, quo quidem illo voluptatibus voluptates dolor asperiores laudantium obcaecati
+              corporis neque similique. Provident.</p>
+            <p>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                  alt="Valid CSS!" />
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="blogSlides fade">
+          <img src="images/standard_resolution-(6).jpg" alt="image">
+          <div class="blog-slider__text">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, in cum architecto minima eius,
+              molestias ut dignissimos, quo quidem illo voluptatibus voluptates dolor asperiores laudantium obcaecati
+              corporis neque similique. Provident.</p>
+            <p>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                  alt="Valid CSS!" />
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="blogSlides fade">
+          <img src="images/standard_resolution-(7).jpg" alt="image">
+          <div class="blog-slider__text">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, in cum architecto minima eius,
+              molestias ut dignissimos, quo quidem illo voluptatibus voluptates dolor asperiores laudantium obcaecati
+              corporis neque similique. Provident.</p>
+            <p>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                  alt="Valid CSS!" />
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="blogSlides fade">
+          <img src="images/standard_resolution-(8).jpg" alt="image">
+          <div class="blog-slider__text">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, in cum architecto minima eius,
+              molestias ut dignissimos, quo quidem illo voluptatibus voluptates dolor asperiores laudantium obcaecati
+              corporis neque similique. Provident.</p>
+            <p>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                  alt="Valid CSS!" />
+              </a>
+            </p>
+          </div>
+        </div>
+        <span onclick='closeModal(a1)'>x</span>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </div>
+    <section class='section-container'>
+      <h2 class='finsa-title'>New FINSA Range</h2>
+      <section class='section-2-row'>
+        <div class='new-range-ctn'>
+          <a href="#">
+            <img class='new-range-img' src="images/three-12twenty-side_5.jpg" alt="Melamine wood finish on MDF">
+            <h4>12Twenty Melamine <i class="fas fa-chevron-right"></i></h4>
+          </a>
+        </div>
+        <div class='new-range-ctn'>
+          <a href="#">
+            <img class='new-range-img' src="images/Fibracolour-Trio_5.jpg" alt="Blue MDF">
+            <h4>Coloured MDF <i class="fas fa-chevron-right"></i></h4>
+          </a>
+        </div>
+        <div class='new-range-ctn'>
+          <a href="#">
+            <img class='new-range-img' src="images/Hidrofugo.jpg" alt="Green MDF">
+            <h4>Hidrofug MDF <i class="fas fa-chevron-right"></i></h4>
+          </a>
+        </div>
+        <div class='new-range-ctn'>
+          <a href="#">
+            <img class='new-range-img' src="images/three-textures_5.jpg" alt="Horizontal wood panel">
+            <h4>3D Textured MDF <i class="fas fa-chevron-right"></i></h4>
+          </a>
+        </div>
+      </section>
+    </section>
+    <section class='section-container'>
+      <h2 class='finsa-title'>Shop Popular Categories</h2>
+      <p class='finsa-text'>
+        Whatever plastic or wood sheet product you want, we have the in-house capabilities to cut it to any size or
+        shape you like. Whether you’re after beautiful <a href="#"> polycarbonate sheets </a> or gorgeous <a
+          href="#">splashbacks</a>, we are able to accommodate your exact requirements. We are also fully able to work
+        and manufacture unique products for <a href="#">MDF</a>, <a href="#">plywood</a> or <a href="#">OSB</a>.
+        Whatever you need, we’ll pull out all the stops to provide it quickly and efficiently.
+      </p>
+      <section class='section-2-row'>
+        <div class='new-range-ctn'>
+          <a href="#">
+            <img class='new-range-img' src="images/Clear_Acrylic_Home.jpg" alt="Melamine wood finish on MDF">
+            <h4>Clear Acrylic <i class="fas fa-chevron-right"></i></h4>
+          </a>
+        </div>
+        <div class='new-range-ctn'>
+          <a href="#">
+            <img class='new-range-img' src="images/Coloured_Acrylic_Home.jpg" alt="Blue MDF">
+            <h4>Coloured Acrylic <i class="fas fa-chevron-right"></i></h4>
+          </a>
+        </div>
+        <div class='new-range-ctn'>
+          <a href="#">
+            <img class='new-range-img' src="images/Coloured_Acrylic_Home.jpg" alt="Green MDF">
+            <h4>Mirrored Acrylic <i class="fas fa-chevron-right"></i></h4>
+          </a>
+        </div>
+        <div class='new-range-ctn'>
+          <a href="#">
+            <img class='new-range-img' src="images/Splashback_Home.jpg" alt="Horizontal wood panel">
+            <h4>Acrylic Splashback <i class="fas fa-chevron-right"></i></h4>
+          </a>
+        </div>
+        <div class='new-range-ctn'>
+          <a href="#">
+            <img class='new-range-img' src="images/MDF_Home.jpg" alt="Melamine wood finish on MDF">
+            <h4>Standard MDF <i class="fas fa-chevron-right"></i></h4>
+          </a>
+        </div>
+        <div class='new-range-ctn'>
+          <a href="#">
+            <img class='new-range-img' src="images/UAT_MDF_Veneer.jpg" alt="Blue MDF">
+            <h4>Veneered MDF <i class="fas fa-chevron-right"></i></h4>
+          </a>
+        </div>
+        <div class='new-range-ctn'>
+          <a href="#">
+            <img class='new-range-img' src="images/Plywood_Home_1_.jpg" alt="Green MDF">
+            <h4>Plywood <i class="fas fa-chevron-right"></i></h4>
+          </a>
+        </div>
+        <div class='new-range-ctn'>
+          <a href="#">
+            <img class='new-range-img' src="images/Wall_Panelling_Home.jpg" alt="Horizontal wood panel">
+            <h4>Wall Panelling <i class="fas fa-chevron-right"></i></h4>
+          </a>
+        </div>
+      </section>
+    </section>
+  </main>
+  <div class='container'>
+    <div class='container-child'>
+      <i class="fas fa-truck"></i>
+      <div class='container-grandchild '>
+        <h3 class='large-txt'>Free Delivery</h3>
+        <p>On Orders Over £150</p>
+      </div>
+    </div>
+    <div class='container-child'>
+      <i class="fas fa-clock"></i>
+      <div class='container-grandchild '>
+        <h3 class='large-txt'> Express Delivery</h3>
+        <p>Get Your Order Faster</p>
+      </div>
+    </div>
+    <div class='container-child'>
+      <i class="fas fa-pound-sign"></i>
+      <div class='container-grandchild '>
+        <h3 class='large-txt'>Price Match Offer</h3>
+        <p>See Price Match T&Cs</p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class='footer-outer-wrap'>
+      <div class='footer-wrapper'>
+        <ul>
+          <li class='footer-titles'>Help</li>
+          <li><a href="#">Delivery Policy</a></li>
+          <li><a href="#">Returns Policy</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cutting Tolerance</a></li>
+          <li><a href="#"> Plastic Fabrication</a></li>
+          <li><a href="#">Stands and Boxes</a></li>
+          <li><a href="#">Frequently Asked Questions</a></li>
+        </ul>
+        <ul>
+          <li class='footer-titles'>Pages</li>
+          <li><a href="#"> Why Choose Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Price Match T&Cs</a></li>
+          <li><a href="#"> Blog</a></li>
+          <li><a href="#"> Customer Images</a></li>
+          <li><a href="#"> Guides</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+        <ul>
+          <li class='footer-titles'>Services</li>
+          <li><a href="#">CNC Routing</a></li>
+          <li><a href="#">CNC Machining</a></li>
+          <li><a href="#">CNC Engraving</a></li>
+          <li><a href="#">CNC Milling</a></li>
+          <li><a href="#">CNC Turning</a></li>
+          <li><a href="#">Plastic Fabrication</a></li>
+        </ul>
+        <div class='company-info'>
+          <div class='logo'><img src="images/Cut_my_plastic_Blue_and_Black_CMYK_1.png" alt="logo">
+          </div>
+          <p>Unit 51-52, <br>
+            Mackley Industrial Estate,<br>
+            Henfield Rd,<br>
+            Small Dole,<br>
+            Henfield,<br>
+            West Sussex,
+            BN5 9XR<br>
+            <a href="#">info@cutmyplastic.co.uk</a><br>
+            <a href="#">01903 389024</a><br>
+            Company Number: 10777686<br>
+            VAT Number: 279526948
+          </p>
+        </div>
+      </div>
+      <div class="pay-icons-wrapper">
+        <div class='pay-icons'>
+          <img src="images/pay1.jpg" alt="visa-icon">
+          <img src="images/pay2.jpg" alt="payment-icon">
+          <img src="images/pay4.jpg" alt="master-card-icon">
+          <img src="images/pp-logo-100px.jpg" alt="pay pal icon">
+        </div>
+        <p> Copyright © 2022 Cut My Plastic. All rights reserved.</p>
+
+      </div>
+    </div>
+  </footer>
+  <script src='index.js'></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+
+      autoplay: {
+        delay: 4000,
+      },
+
+
+      slidesPerView: 3.5,
+      spaceBetween: 10,
+
+      // Responsive breakpoints
+      breakpoints: {
+
+        465: {
+          slidesPerView: 4.63,
+          spaceBetween: 15
+        },
+
+        991: {
+          slidesPerView: 5.8,
+          spaceBetween: 5
+
+        }
+
+      },
+
+
+    })
+  </script>
+</body>
+
+</html>
