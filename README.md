@@ -5,4 +5,7 @@ The original website (cut my plastic) is a bootstrap website. Ive made a copy of
 
 Ive tried to be as accurate as possible in terms of visually recreating the website and functionaity whilst also keeping the code maintainable. All code is my own and was written from scratch and passes validation (no errors). Check out the original website at https://www.cutmyplastic.co.uk/ and compare it to my replication.
 
-To open this project on the browser simply click the green code button, download zip file and click on index.html
+To open this project on the browser 
+1. click the green code button and download zip file 
+2. open the folder then click file on menu bar then Extract all
+3. click on index.html and view project in the browser
