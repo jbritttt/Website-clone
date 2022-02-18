@@ -738,7 +738,7 @@
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: auto;
-            width: 100%;
+            
             margin: auto;
             background-color: #f8f8f8;
             border-bottom: 1px solid #e7e7e7;
