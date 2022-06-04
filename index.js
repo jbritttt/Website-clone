@@ -1,8 +1,8 @@
 // All code is my own and was written from scratch 
 
-// Ive tried to get the functionality needed with writting as little code as possible
 
-// I havnt done much commenting on this code because I will explain it in depth during interview if needed.
+
+
 
 
 //VANILLA SLIDER//
